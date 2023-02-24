@@ -1,0 +1,16 @@
+#container{
+    display: flex;
+    height: 256px;
+    width: 256px;
+    border: solid black 1px;
+    flex-wrap: wrap;
+}
+
+.item{
+    width: 6.25%;
+    height: 6.25%;
+}
+
+.item:hover{
+    background-color: black;
+}
