@@ -11,6 +11,14 @@
     height: 6.25%;
 }
 
-.item:hover{
+.black{
     background-color: black;
 }
+
+.white{
+    background-color: white;
+}
+
+/* .item:hover{
+    background-color: black;
+} */
