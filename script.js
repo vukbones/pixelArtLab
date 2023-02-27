@@ -11,10 +11,7 @@ function change_color(item){
     }
 }
 
-for(let i = 0; i < 256; i++){
-    const item = document.createElement("div");
-    item.classList.add("item");
-    container.appendChild(item);
+function coloring(item){
     item.addEventListener("mousedown", ()=>{
         isMouseDown = true;
         change_color(item);
@@ -24,11 +21,36 @@ for(let i = 0; i < 256; i++){
             change_color(item);
         }
     });
+    item.addEventListener("dragstart", (e)=>{
+        e.preventDefault();
+    });
 }
+
+for(let i = 0; i < 256; i++){
+    const item = document.createElement("div");
+    item.classList.add("item");
+    container.appendChild(item);
+    coloring(item);  
+}
+
+document.addEventListener("mousedown", ()=>{
+    isMouseDown = true;
+});
 
 document.addEventListener("mouseup", ()=>{
     isMouseDown = false;
-})
+});
+
+coloring(document);
+
+
+const whiteBtn = document.getElementById("clear");
+whiteBtn.addEventListener("click", ()=>{
+    const items = document.querySelectorAll(".item");
+    items.forEach((item)=>{
+        item.classList.remove("black");
+    });
+});
 
 
 
