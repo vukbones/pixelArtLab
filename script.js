@@ -41,8 +41,6 @@ document.addEventListener("mouseup", ()=>{
     isMouseDown = false;
 });
 
-coloring(document);
-
 
 const whiteBtn = document.getElementById("clear");
 whiteBtn.addEventListener("click", ()=>{
