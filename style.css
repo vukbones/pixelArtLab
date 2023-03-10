@@ -1,9 +1,24 @@
+*{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+    background-color: #121212;
+}
+
+.supercontainer{
+    display: flex;
+    justify-content: center;
+}
+
 #container{
     display: flex;
+    justify-content: center;
     height: 512px;
     width: 512px;
     border: solid black 1px;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .item{
@@ -11,9 +26,28 @@
     height: 6.25%;
 }
 
-.black{
-    background-color: black;
+.buttonsCont{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
 }
+
+button{
+    display: flex;
+    margin-top: 30px;
+    height: 50px;
+    width: 120px;
+    justify-content: center;
+    font-size: x-large;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #332940;
+    color: bisque;
+}
+
+/* .black{
+    background-color: black;
+} */
 
 .white{
     background-color: white;
